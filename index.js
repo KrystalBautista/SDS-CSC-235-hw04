@@ -58,7 +58,7 @@ function normalize(s) {
 
 Promise.all([
     d3.json("us-states.json"),
-    d3.csv("US_Crime_DataSet_small.csv")
+    d3.csv("US_Crime_DataSet.csv")
 ]).then(([geoData, data]) => {
 
     console.log("Geo loaded:", geoData);

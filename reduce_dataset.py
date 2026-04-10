@@ -1,22 +1,21 @@
+
 import pandas as pd
-import random
 
 
-input_file = "US_Crime_DataSet.csv" 
-output_file = "US_Crime_DataSet_small.csv" 
-sample_size = 1000  
+file_path = "US_Crime_DataSet.csv"  
+rows_to_keep = 1000
 
 
-df = pd.read_csv(input_file)
+df = pd.read_csv(file_path)
 
 
-if sample_size > len(df):
-    print(f"Sample size ({sample_size}) larger than dataset size ({len(df)}). Using full dataset.")
-    df_sampled = df
+if rows_to_keep >= len(df):
+    print(f"CSV has only {len(df)} rows, keeping all of them.")
+    df_small = df
 else:
-    df_sampled = df.sample(n=sample_size, random_state=42)  
+    df_small = df.sample(n=rows_to_keep, random_state=42)
 
 
-df_sampled.to_csv(output_file, index=False)
+df_small.to_csv(file_path, index=False)
 
-print(f"Smaller dataset saved to {output_file}, {len(df_sampled)} rows.")
+print(f"Original CSV overwritten with {len(df_small)} rows.")
