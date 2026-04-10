@@ -4,7 +4,7 @@ import random
 
 input_file = "US_Crime_DataSet.csv" 
 output_file = "US_Crime_DataSet_small.csv" 
-sample_size = 1500  
+sample_size = 1000  
 
 
 df = pd.read_csv(input_file)
