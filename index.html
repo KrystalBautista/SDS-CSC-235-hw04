@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Crime Visual Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>US Homicide Patterns Explorer</h1>
+
+<div class="description">
+    <p>
+        This visualization explores US homicide data using two linked views:
+        a geographic map of state-level crime distribution and a bar chart
+        showing weapon usage patterns.
+    </p>
+
+    <p>
+        <strong>How to interact:</strong>
+        <ul>
+            <li>Click a state on the map to view weapon distribution for that state.</li>
+            <li>Use the year dropdown to filter crime data by year.</li>
+            <li>Hover over states to see total crime counts.</li>
+            <li>Click “Reset” to clear selections and view full data.</li>
+        </ul>
+    </p>
+</div>
+
+<div class="controls">
+    <label>Filter by Year:</label>
+    <select id="yearFilter">
+        <option value="">All Years</option>
+    </select>
+    <button id="resetBtn">Reset</button>
+</div>
+
+<div class="container">
+    <svg id="map"></svg>
+    <svg id="barChart"></svg>
+</div>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script src="d3.v7.min.js"></script>
+
+
+<script src="https://d3js.org/topojson.v3.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>

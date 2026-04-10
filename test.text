@@ -1,0 +1,12 @@
+1. Write down two specific analysis tasks you could ask someone to do with your system. For example, can you identify two cliques in this network?
+Identify which state had the most total crimes in 2014.
+What was the most used weapon for crimes in Texas in 1999?
+
+2. Ask a classmate or friend to perform the tasks, one by one. As they do, take notes. What do they find intuative about your system?
+ What confuses them? Do any unexpected bugs arise? 
+ The dropdown menu for years was easy to use, they realized that hovering over the map told them total crimes. 
+ Before actually clicking on a state they were confused why the visualization that was titled weapon distribution by state was blank.
+
+
+3. Pick one reasonable adjustment to make to your system based on your testing. Implement that adjustment. 
+Add instructions for interaction so user knows to click on a state in order to see weapon distribution
